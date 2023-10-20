@@ -12,4 +12,14 @@ public class HomeController {
         model.addAttribute("greeting", "This is a home page idk what to do with it");
         return "home";
     }
+    @RequestMapping("/test/header")
+    public String getHeader(Model model) {
+        model.addAttribute("greeting", "This is a home page idk what to do with it");
+        return "/fragments/header";
+    }
+    @RequestMapping("/test/layout")
+    public String getMainLayout(Model model) {
+        model.addAttribute("greeting", "This is a home page idk what to do with it");
+        return "/layouts/mainLayout";
+    }
 }
