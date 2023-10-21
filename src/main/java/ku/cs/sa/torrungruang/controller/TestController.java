@@ -12,6 +12,11 @@ public class TestController {
     }
     @RequestMapping("/test/layout")
     public String getMainLayout(Model model) {
-        return "/layouts/main-layout";
+        return "/layouts/main";
+    }
+
+    @RequestMapping("/test/footer")
+    public String getSidebar(Model model) {
+        return "/fragments/footer";
     }
 }
