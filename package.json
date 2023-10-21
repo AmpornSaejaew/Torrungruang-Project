@@ -1,0 +1,17 @@
+{
+  "name": "torrungruang-project",
+  "version": "1.0.0",
+  "description": "Web application for rope factory back office system",
+  "main": "index.js",
+  "scripts": {
+  "css": "npx tailwindcss -i styles/input.css -o ./src/main/resources/static/css/main.css --watch"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "3.3.3",
+    "postcss": "^8.2.15",
+    "autoprefixer": "^10.4.0"
+  }
+}

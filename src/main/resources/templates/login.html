@@ -4,61 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Torrungruang Application</title>
-  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-  <script th:src="@{/js/bootstrap.min.js}"></script>
+<!--  <link th:rel="stylesheet" th:href="@{/css/bootstrap.min.css}">-->
+<!--  <script th:src="@{/js/bootstrap.min.js}"></script>-->
+  <link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
-<body>
-<section class="mh-100">
-    <div class="row"
-          style="height: 800px"
-    >
-      <div
-              class="col-md-9 col-lg-6 col-xl-5"
-              style="background-image:url('https://scontent.fbkk22-3.fna.fbcdn.net/v/t39.30808-6/392786882_625234119814832_9051788634971925872_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF-KkrNOykdyKaVXRKJ46acsjcTWlrZI-iyNxNaWtkj6LkchbsJU4tMuc-QU1Y3Tfz7x1QVuGglvpYmodMEJc20&_nc_ohc=Y4jKfRKjBVkAX-rm7SF&_nc_ht=scontent.fbkk22-3.fna&oh=00_AfDo0DflPlrxoZYc4fb0hSO7Us4EfyMb9n8UGRLkSxO_9w&oe=653866F3');">
-      </div>
-
-      <div class="col-md-8 align-content-center col-lg-6 col-xl-4 offset-xl-1">
-
-        <form th:action="@{/login}" method="POST">
-          <div id="error-msg" th:if="${param.error}" class="alert alert-danger">
-            Invalid username or password
+<body class="overflow-hidden h-screen">
+<section class="">
+    <div class="grid grid-cols-3 h-full w-full">
+          <div class="col-span-2">
+              <img src="https://i.ibb.co/dKf5PPK/Screenshot-2023-10-21-142308-1.jpg" alt="Image Description" class="h-full w-auto max-w-full object-cover">
           </div>
-          <div id="logout-msg" th:if="${param.logout}" class="alert alert-success">
+
+
+      <div class="grid place-items-center p-32">
+
+          <img src="https://i.ibb.co/0sz3Q9R/removal-ai-d52ad572-d7a5-4b25-b3c8-ecfbaad7401b-346270453-921664612385686-425855527385450414-n.png" alt="Image Description" class="w-20 h-20 m-2">
+          <img src="https://i.ibb.co/f8NGqxw/Screenshot-2023-10-21-135309-removebg-preview.png" alt="Image Description" class="w-80 h-50 m-3">
+
+
+        <form th:action="@{/login}" method="POST" class="mt-3">
+<!--          <div id="error-msg" th:if="${param.error}" class="bg-red-500 text-white px-4 py-2 mt-4 rounded">-->
+<!--            Invalid username or password-->
+<!--          </div>-->
+          <div id="logout-msg" th:if="${param.logout}" class="bg-green-500 text-white px-4 py-2 mt-4 rounded">
             You have been logged out
           </div>
 
-          <h1 class="display-5 fw-semibold">Login</h1>
+          <h1 class="text-2xl font-bold mb-5">Login</h1>
 
           <!-- Username input -->
-          <div class="form-outline mb-4">
-            <label class="form-label" for="inputUsername">Username</label>
-            <input type="text" name="username" id="inputUsername" class="form-control form-control-lg"
-                   placeholder="Enter a username" required>
+          <div class="flex flex-col mb-5">
+            <label class="" for="inputUsername" id="usernameLabel">Username</label>
+            <input type="text" name="username" id="inputUsername" class="outline-none bg-gray-50 border-2 border-gray-300 text-gray-900 focus:border-blue-500 text-sm rounded-lg block p-2.5"
+                   placeholder="Enter a username" required onfocus="document.getElementById('usernameLabel').style.color = 'blue'"
+                   onblur="document.getElementById('usernameLabel').style.color = ''">
+            <p id="error-msg" th:if="${param.error}" style="color: red;" class="text-sm">Invalid username or password</p>
 
           </div>
 
           <!-- Password input -->
-          <div class="form-outline mb-3">
-            <label class="form-label" for="inputPassword">Password</label>
-            <input type="password" name="password" id="inputPassword" class="form-control form-control-lg"
-                   placeholder="Enter password" required>
+          <div class="flex flex-col mb-5">
+            <label class="" for="inputPassword" id="passwordLabel">Password</label>
+            <input type="password" name="password" id="inputPassword" class="outline-none bg-gray-50 border-2 border-gray-300 text-gray-900 focus:border-blue-500 text-sm rounded-lg block p-2.5"
+                   placeholder="Enter password" required onfocus="document.getElementById('passwordLabel').style.color = 'blue'"
+                   onblur="document.getElementById('passwordLabel').style.color = ''">
           </div>
 
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="">
             <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
+            <div class="mb-5">
+              <input class="" type="checkbox" value="" id="form2Example3" />
+              <label class="" for="form2Example3">
                 Remember me
               </label>
             </div>
           </div>
 
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button id="submit-button" type="submit" class="btn btn-primary btn-lg"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/signup"
-                                                                              class="link-danger">Register</a></p>
+          <div class="flex flex-col justify-center items-center">
+            <button id="submit-button" type="submit" class="w-full bg-black text-white font-md rounded-lg p-2">Login</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/signup" class="text-blue-500">Register</a></p>
           </div>
 
         </form>
