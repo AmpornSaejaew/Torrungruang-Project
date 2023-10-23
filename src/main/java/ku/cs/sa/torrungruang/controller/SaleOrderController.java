@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/saleOrder")
 public class SaleOrderController {
     @GetMapping
-    public String getPurchaseOrderPage(Model model) {
+    public String getSaleOrderPage(Model model) {
         model.addAttribute("greeting", "Hello");
         // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
         return "so";

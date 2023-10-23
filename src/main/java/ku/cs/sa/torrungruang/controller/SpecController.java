@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/spec")
 public class SpecController {
     @GetMapping
-    public String getInvoicePage(Model model) {
+    public String getSpecPage(Model model) {
         model.addAttribute("greeting", "Hello");
         // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
-        return "spec";
+        return "spec/spec";
     }
-    
+    @GetMapping("/detail")
+    public String getSpecDetailPage(Model model) {
+        model.addAttribute("greeting", "Hello");
+        // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
+        return "spec/spec-detail";
+    }
 }
 
 

@@ -12,9 +12,20 @@ public class PurchaseOrderController {
     public String getPurchaseOrderPage(Model model) {
         model.addAttribute("greeting", "Hello");
         // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
-        return "po";
+        return "po/po";
     }
-    
+    @GetMapping("/add")
+    public String getPurchaseOrderAddPage(Model model) {
+        model.addAttribute("greeting", "Hello");
+        // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
+        return "po/po-add";
+    }
+    @GetMapping("/detail")
+    public String getPurchaseOrderDetailPage(Model model) {
+        model.addAttribute("greeting", "Hello");
+        // ต้องคืนค่าเป็นชื่อไฟล์ html template โดยในเมธอดนี้ คืนค่าเป็น home.html
+        return "po/po-detail";
+    }
 }
 
 
