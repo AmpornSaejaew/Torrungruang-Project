@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Flower Management Web Application</title>
-    <link th:rel="stylesheet" th:href="@{/css/output.css}">
+    <title>Torrungruang</title>
+    <link th:rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 
 <body class="flex flex-col min-h-screen">
-    <div th:replace="~{fragments/header::header}" class=""></div>
-    <main id="content-layout" class="flex-1 flex-col flex-shrink-0 py-12 px-20 bg-gray-100 mx-44 overflow-hidden min-h-screen">
-        <div layout:fragment="content" class="">
+    <div th:replace="~{fragments/header::header}" ></div>
+    <main id="content-layout" class="flex-1 flex-col flex-shrink-0 py-9 px-20 bg-gray-100 mx-44 overflow-hidden min-h-screen">
+        <div layout:fragment="content" class="font-body">
             
         </div>
     </main>
-    <div th:replace="~{fragments/footer::footer}" class=""></div>
+    <div th:replace="~{fragments/footer::footer}"></div>
 </body>
 
 </html>
