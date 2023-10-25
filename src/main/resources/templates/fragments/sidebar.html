@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+<div th:fragment="sidebar" class="py-12">
+    <div sec:authorize="isAuthenticated()" class="text-white p-9">
+        <p><b><span sec:authentication="name"></span></b></p>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/3y5Bvsv/rope-4.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">Spec</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/TvZNC9C/customer.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">Customer</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/H2b6qrF/document.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">PO</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/j3S2LPT/clipboard.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">SO</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/3N7yQgH/delivery.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">Delivery</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/YfjqfvD/invoice.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">Invoice</a>
+    </div>
+    <div class="flex btn-sidebar" style="align-item: center; gap: 15px;">
+        <img src="https://i.ibb.co/SKhHLsf/payment-check.png" alt="Image Description" width="22px">
+        <a  th:href="@{/}" class="">Receipt</a>
+    </div>
+
+<!--    <div class="">-->
+<!--        <a class="mb-2 btn-sidebar" th:href="@{/}">CUSTOMER</a>-->
+<!--    </div>-->
+
+
+</div>
+
+</body>
+</html>

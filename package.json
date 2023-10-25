@@ -4,7 +4,9 @@
   "description": "Web application for rope factory back office system",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i styles/input.css -o ./src/main/resources/static/css/main.css --watch"
+    "dev": "npx tailwindcss -i styles/input.css -o ./src/main/resources/static/css/main.css --watch",
+    "build": "tailwindcss -i styles/input.css -o ../resources/static/main.css",
+    "watch": "tailwindcss -i styles/input.css --watch"
   },
   "keywords": [],
   "author": "",

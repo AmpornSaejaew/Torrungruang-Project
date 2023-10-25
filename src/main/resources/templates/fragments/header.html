@@ -3,63 +3,61 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Flower Management Web Application</title>
-    <link th:rel="stylesheet" th:href="@{/css/output.css}">
-    <!-- <link th:rel="stylesheet" th:href=""> -->
+    <title>Torrungruang Web Application</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
     <!-- <script th:src="@{/js/bootstrap.min.js}"></script> -->
 </head>
-<body>
-  <div class="navbar bg-sky-400 max-w-screen p-4 sticky top-0 z-50" th:fragment="header" >
-    <div class="navbar-start">
-      <div class="dropdown">
-        <label tabindex="0" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a>SPEC</a></li>
-          <li><a>CUSTOMER</a></li>
-          <li><a>PO</a></li>
-          <li><a>SO</a></li>
-          <li><a>DELIVERY</a></li>
-          <li><a>INVOICE</a></li>
-          <li><a>RECEIPT</a></li>
-          <!-- <li>
-            <a>Parent</a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li> -->
-          
-        </ul>
-      </div>
-      <a class="btn btn-ghost normal-case text-xl" th:href="@{/}">Torrungruang</a>
-    </div>
+<body class="">
+  <div class="navbar-center max-w-screen p-4 top-0 w-full bg-white shadow-md z-50 sticky py-8"  th:fragment="header" >
+<!--    <div class="navbar-start">-->
+<!--      <div class="dropdown">-->
+<!--        <label tabindex="0" class="btn btn-ghost lg:hidden">-->
+<!--          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>-->
+<!--        </label>-->
+<!--        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">-->
+<!--          <li><a>SPEC</a></li>-->
+<!--          <li><a>CUSTOMER</a></li>-->
+<!--          <li><a>PO</a></li>-->
+<!--          <li><a>SO</a></li>-->
+<!--          <li><a>DELIVERY</a></li>-->
+<!--          <li><a>INVOICE</a></li>-->
+<!--          <li><a>RECEIPT</a></li>-->
+<!--          &lt;!&ndash; <li>-->
+<!--            <a>Parent</a>-->
+<!--            <ul class="p-2">-->
+<!--              <li><a>Submenu 1</a></li>-->
+<!--              <li><a>Submenu 2</a></li>-->
+<!--            </ul>-->
+<!--          </li> &ndash;&gt;-->
+
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
     <!-- navbar when open naka -->
-    <div class="navbar-center hidden lg:flex">   
-      <ul class="menu menu-horizontal px-1">
-        <li><a>SPEC</a></li>
-        <li><a>CUSTOMER</a></li>
-        <li><a>PO</a></li>
-        <li><a>SO</a></li>
-        <li><a>DELIVERY</a></li>
-        <li><a>INVOICE</a></li>
-        <li><a>RECEIPT</a></li>
-        <!-- <li tabindex="0">
-          <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details>
-        </li> -->
-      </ul>
-    </div>
-    <div class="navbar-end">
-      
-      <a class="btn">Button</a>
-    </div>
+    <p class="text-2xl font-bold text-center" th:href="@{/}">Torrungruang</p>
+<!--    <div class="navbar-center hidden lg:flex">-->
+<!--      <ul class="menu menu-horizontal px-1">-->
+<!--        <li><a>SPEC</a></li>-->
+<!--        <li><a>CUSTOMER</a></li>-->
+<!--        <li><a>PO</a></li>-->
+<!--        <li><a>SO</a></li>-->
+<!--        <li><a>DELIVERY</a></li>-->
+<!--        <li><a>INVOICE</a></li>-->
+<!--        <li><a>RECEIPT</a></li>-->
+<!--        &lt;!&ndash; <li tabindex="0">-->
+<!--          <details>-->
+<!--            <summary>Parent</summary>-->
+<!--            <ul class="p-2">-->
+<!--              <li><a>Submenu 1</a></li>-->
+<!--              <li><a>Submenu 2</a></li>-->
+<!--            </ul>-->
+<!--          </details>-->
+<!--        </li> &ndash;&gt;-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="navbar-end">-->
+<!--      <a class="btn">Button</a>-->
+<!--    </div>-->
   </div>
 </body>
 </html>

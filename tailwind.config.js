@@ -1,7 +1,8 @@
+
 module.exports = {
   content: ["./src/main/resources/templates/**/*.{html,js}"],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")]
 }

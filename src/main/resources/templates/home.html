@@ -4,15 +4,17 @@
       layout:decorate="~{/layouts/main}" xmlns:sec="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8">
-    <title>Flower Management Web Application</title>
-    <link th:rel="stylesheet" th:href="@{/css/output.css}">
+    <title>Torrungruang Management Web Application</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
     <!-- <link th:rel="stylesheet" th:href=""> -->
     <!-- <script th:src="@{/js/bootstrap.min.js}"></script> -->
   </head>
   <body>
-    <div layout:fragment="content" class="">
-      <h1 class="text-center text-bold text-2xl">Purchase Order</h1>
-      <div th:insert="~{modals/PO-modal::PO-modal}"></div>
+    <div layout:fragment="content" class="py-10">
+      <div class="flex mx-auto w-full md:w-5/6 lg:w-2/3">
+              <div th:insert="~{modals/PO-modal::PO-modal}"></div>
+          <h1 class="flex-1 text-center font-bold text-2xl">Purchase Order</h1>
+      </div>
 
       <!-- Open the modal using ID.showModal() method -->
   
